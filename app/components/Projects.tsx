@@ -1,4 +1,8 @@
+"use client";
+
 import Image from "next/image";
+import { motion } from "framer-motion";
+const m: any = motion as any;
 
 interface Project {
   id: number;
@@ -27,13 +31,13 @@ const featuredProjects: Project[] = [
 
 export default function Projects(): React.JSX.Element {
   return (
-    <section id="lab" className="py-20 px-6">
+    <m.section id="lab" className="py-20 px-6" initial={{ opacity: 0, y: 8 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
       <div className="container mx-auto max-w-7xl">
         {featuredProjects.map((project, index) => {
           const isEven = index % 2 === 1;
           
           return (
-            <div key={project.id} className="mb-20 last:mb-0">
+            <m.div key={project.id} className="mb-20 last:mb-0" initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: index * 0.12 }}>
               <div className={`relative grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center ${
                 isEven ? "lg:grid-flow-dense" : ""
               }`}>
@@ -46,23 +50,22 @@ export default function Projects(): React.JSX.Element {
                     {project.title}
                   </h3>
                   {/* Description Card - extends over image */}
-                  <div className="relative z-10 mb-6">
-                    <div className={`bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-md rounded-2xl p-6 lg:p-8 border border-white/10 shadow-lg ${
-                      isEven ? "lg:ml-[-20%]" : "lg:w-[calc(100%+20%)]"
-                    }`}>
+                  <m.div className="relative z-10 mb-6">
+                      <m.div className={'bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-md rounded-2xl p-6 lg:p-8 border border-white/10 shadow-lg ' + (isEven ? 'lg:ml-[-20%]' : 'lg:w-[calc(100%+20%)]') } whileHover={{ y: -6 }} transition={{ duration: 0.18 }}>
                       <p className="text-white/90 text-base lg:text-lg leading-relaxed">
                         {project.description}
                       </p>
-                    </div>
-                  </div>
-                  {/* Website link */}
-                  {project.link && (
-                    <div className="flex gap-4">
-                      <a
+                    </m.div>
+                  </m.div>
+                    {/* Website link */}
+                    {project.link && (
+                      <div className="flex gap-4">
+                      <m.a
                         href={project.link}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-white hover:text-purple-400 transition-colors duration-200"
+                        whileHover={{ scale: 1.06, x: 6 }}
                         aria-label="Visit project website"
                       >
                         <svg
@@ -79,15 +82,15 @@ export default function Projects(): React.JSX.Element {
                           <line x1="2" y1="12" x2="22" y2="12" />
                           <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
                         </svg>
-                      </a>
+                      </m.a>
                     </div>
                   )}
                 </div>
 
                 {/* Image Content */}
                 <div className={`${isEven ? "lg:col-start-1 lg:row-start-1" : ""}`}>
-                  <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-slate-950 p-2 lg:p-3 shadow-2xl">
-                    <div className="relative w-full h-full rounded-lg overflow-hidden">
+                  <m.div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-slate-950 p-2 lg:p-3 shadow-2xl" whileHover={{ scale: 1.03 }}>
+                    <m.div className="relative w-full h-full rounded-lg overflow-hidden">
                       <Image
                         src={project.image}
                         alt={project.title}
@@ -95,15 +98,15 @@ export default function Projects(): React.JSX.Element {
                         sizes="(max-width: 1024px) 100vw, 50vw"
                         className="object-cover"
                       />
-                    </div>
-                  </div>
+                    </m.div>
+                  </m.div>
                 </div>
               </div>
-            </div>
+            </m.div>
           );
         })}
       </div>
-    </section>
+    </m.section>
   );
 }
 
