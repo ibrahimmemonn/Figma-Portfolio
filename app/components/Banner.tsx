@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 
 export default function Banner(): React.JSX.Element {
-  const texts = ["Software Engineer", "UI/UX Designer", "React Native Developer"];
+  const texts = ["Cloud & SaaS Operations Engineer", "DevOps & Automation Engineer", "Cloud Infrastructure Enthusiast"];
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
@@ -68,7 +68,7 @@ export default function Banner(): React.JSX.Element {
                   <div className="relative">
                     <p className="text-white text-lg whitespace-nowrap">
                       Hello! I Am{" "}
-                      <span className="text-purple-400">Ibrahim Memon</span>
+                      <span className="text-purple-400">Naduni Madawala</span>
                     </p>
                   </div>
                   <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-8 border-l-transparent border-r-8 border-r-transparent border-t-8 border-t-white/10"></div>
@@ -76,7 +76,7 @@ export default function Banner(): React.JSX.Element {
               </div>
               <Image
                 src="/assets/me.png"
-                alt="Ibrahim Memon - Software Engineer and Designer"
+                alt="Naduni Madawala - Cloud & SaaS Operations Engineer"
                 width={300}
                 height={300}
                 className=" max-w-md absolute"
@@ -85,7 +85,7 @@ export default function Banner(): React.JSX.Element {
               />
               <Image
                 src="/assets/me-glow.png"
-                alt="Ibrahim Memon - Software Engineer and Designer"
+                alt="Naduni Madawala - Cloud & SaaS Operations Engineer"
                 width={300}
                 height={300}
                 className="max-w-md "
@@ -108,7 +108,7 @@ export default function Banner(): React.JSX.Element {
               <div style={{ bottom: 40, position: "relative" }}>
                 <p className="text-white text-lg">
                   Hello! I Am{" "}
-                  <span className="text-purple-400">Ibrahim Memon</span>
+                  <span className="text-purple-400">Naduni Madawala</span>
                 </p>
               </div>
               <div className="absolute -bottom-2 left-8 w-0 h-0 border-l-8 border-l-transparent border-r-8 border-r-transparent border-t-8 border-t-white/10"></div>
