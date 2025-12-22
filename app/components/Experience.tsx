@@ -11,27 +11,48 @@ interface ExperienceCard {
 const experienceCards: ExperienceCard[] = [
   {
     id: 1,
-    title: "WebHR - HR Management App",
-    description: "WebHR automates all of your company's HR processes such as Recruitment, Onboarding, Payroll, Time & Attendance, Leaves & PTO, Performance, and much more.",
-    icon: "/cards/card-1.png",
+    title: "SaaS Operations Engineer – Sitecore (IGT1 Sri Lanka)",
+    Nov 2024 – Aug 2025
+    description: `
+Nov 2024 – Aug 2025
+
+• Provided 24/7 operational support for production SaaS environments, resolving incidents across applications, infrastructure, and integrations within SLAs.
+• Automated deployments and configuration management using Azure DevOps CI/CD pipelines, GitHub Actions, and Terraform.
+• Managed containerized workloads on Azure Kubernetes Service (AKS) using Helm charts.
+• Monitored application health using Prometheus, Grafana, and Site24x7.
+• Executed automation jobs with Rundeck and Ansible playbooks.
+• Supported Azure services including App Services, SQL Databases, Redis, Logic Apps, and networking.
+• Performed RCA, created runbooks, SOPs, and operational documentation in Confluence.
+    `,
+    icon: "/cards/sitecore.png",
   },
   {
     id: 2,
-    title: "WebHR Kiosk - Time Clock Kiosk",
-    description: "WebHR Kiosk is a time clock kiosk that allows you to clock in and out of your work. It is a simple and easy to use app that allows you to clock in and out of your work.",
-    icon: "/cards/card-2.png",
+    title: "Operations Engineer – eBuilder Technology Centre (Pvt) Ltd",
+    description: `
+May 2022 – Oct 2024
+
+• Supported Tier-1 banking systems and middleware integrations ensuring high availability.
+• Troubleshot Linux systems using logs, configurations, Bash scripts, and API checks.
+• Developed Bash and PowerShell scripts for automation and system maintenance.
+• Participated in on-prem to Azure AD migration and Microsoft 365 identity tasks.
+• Supported middleware migrations and SQL-based data validation.
+• Managed incidents and changes via Jira and TopDesk following ITIL practices.
+• Participated in 24/7 on-call rotation support.
+    `,
+    icon: "/cards/ebuilder.png",
   },
   {
     id: 3,
-    title: "Somezing - AI-Powered Agents",
-    description: "Somezing is a AI-Powered Agents to Automate Your Workflows. It is a simple and easy to use app that allows you to automate your workflows.",
-    icon: "/cards/card-3.png",
-  },
-  {
-    id: 4,
-    title: "FileIT - File Sharing App",
-    description: "FileIT is a file sharing app that allows you to share files with your friends and family. It is a simple and easy to use app that allows you to share files with your friends and family.",
-    icon: "/cards/card-4.png",
+    title: "Intern – Telecommunication Engineer (Sri Lanka Telecom PLC)",
+    description: `
+Jul 2021 – Jan 2022
+
+• Assisted in design and implementation of the national fibre network.
+• Installed and configured fibre optic cables and network equipment.
+• Performed testing, troubleshooting, and maintenance of fibre networks.
+    `,
+    icon: "/cards/SLT.png",
   },
 ];
 
